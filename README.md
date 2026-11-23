@@ -37,6 +37,6 @@ La console d'administration est ensuite accessible sur `http://localhost:8080`. 
 - Création du package web avec le RestControlleur ProductRestController avec une méthode qui retourne la liste des produits et une autre qui retourne un produit par son id
 - Test Avec CommandLineRunner et création des 3 produits
 - Accès interdit sans passage via keycloak d'ou la nécessité à configurer la sécurité
-
+    ![img_1.png](img_1.png)
 
 ---
