@@ -43,3 +43,11 @@ La console d'administration est ensuite accessible sur `http://localhost:8080`. 
     ![img_2.png](img_2.png)
 
 ---
+
+#### Création du Frontend
+
+- Création de l'application front Angular
+    ![img_3.png](img_3.png)
+- Création des composantes products et customer puis réglage du routage
+- Résolution du problème do Cors en ajoutant un @Bean à la classe SecurityConfig de type CorsConfigurationSource qui marche aussi pour les routes protégé au lieu de @CrossOrigin(*)
+    ![img_4.png](img_4.png)
