@@ -38,5 +38,8 @@ La console d'administration est ensuite accessible sur `http://localhost:8080`. 
 - Test Avec CommandLineRunner et création des 3 produits
 - Accès interdit sans passage via keycloak d'ou la nécessité à configurer la sécurité
     ![img_1.png](img_1.png)
+- Configuration de la sécurité : Ajout de la classe SecurityConfig dans le package security qui est annoté @Configuration et @EnableWebSecurity avec un @Bean qui retourne un SecurityFilterChain et injecte un HttpSecurity object pour configurer. Au début demander l'authentification de tous les requetes sauf ceux qui commencent par /api/** et /h2-console/**, puis desactiver le crsf et authentification STATELESS ...
+- Test d'accès qui marche :
+    ![img_2.png](img_2.png)
 
 ---
