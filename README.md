@@ -51,6 +51,11 @@ La console d'administration est ensuite accessible sur `http://localhost:8080`. 
 - Création des composantes products et customer puis réglage du routage
 - Résolution du problème do Cors en ajoutant un @Bean à la classe SecurityConfig de type CorsConfigurationSource qui marche aussi pour les routes protégé au lieu de @CrossOrigin(*)
     ![img_4.png](img_4.png)
+
+---
+
+#### Démarrage de Keycloak
+
 - Démarrage du keycloak et création du realm : Bdcc-realm et client ecom-client-ang avec deux roles user et admin et deux users
     ![img_5.png](img_5.png)
     ![img_6.png](img_6.png)
@@ -65,8 +70,24 @@ La console d'administration est ensuite accessible sur `http://localhost:8080`. 
     ![img_12.png](img_12.png)
     ![img_13.png](img_13.png)
 
+
+---
+
+#### Sécurité du backend
+
 - Configuration de l'authorization en demandant l'authentification dans SecurityConfig au backend
 - Ajout des paramètres du keycloak (realm , lien de la certif) pour l'accès au public key 
 - Création d'une classe qui fera un JWTConversion dans security package pour accéder aux autorités puis configurer le SecurityFilterChain à utiliser le jwtConverter
 - Ajout du @PreAuthorizze dans les méthodes du RestController pour attribuer les roles et pour que cela marche; l'ajout du @EnableMethodSecurity dans la classeSecurityConfig
+
+
+---
+
+#### Sécurité du frontend
+
+- Installation de la dépendance de l'adaptateur keycloakAngular et KeycloakJs
+- Ajout de la fonction dédié dans app.modules.ts
+- Création de silent-check-sso.html pour la gestion des redirections entre keycloak et frontend puis l'ajouter dans providers
+- Ajouter un guard pour protéger les routes en saisiant les roles correspondants
+
     
