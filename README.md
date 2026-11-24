@@ -88,6 +88,6 @@ La console d'administration est ensuite accessible sur `http://localhost:8080`. 
 - Installation de la dépendance de l'adaptateur keycloakAngular et KeycloakJs
 - Ajout de la fonction dédié dans app.modules.ts
 - Création de silent-check-sso.html pour la gestion des redirections entre keycloak et frontend puis l'ajouter dans providers
-- Ajouter un guard pour protéger les routes en saisiant les roles correspondants
-
+- Ajout d'un guard pour protéger les routes en saisiant les roles correspondants
+- Ajout de l'authentification et login/logout avec keycloak
     
