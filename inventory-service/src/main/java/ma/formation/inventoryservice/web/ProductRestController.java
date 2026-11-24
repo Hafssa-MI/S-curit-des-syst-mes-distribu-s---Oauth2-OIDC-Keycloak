@@ -2,6 +2,7 @@ package ma.formation.inventoryservice.web;
 
 import ma.formation.inventoryservice.entities.Product;
 import ma.formation.inventoryservice.repository.ProductRepository;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,5 +27,10 @@ public class ProductRestController {
     @GetMapping("/products/{id}")
     public Product productById(@PathVariable String id){
         return productRepository.findById(id).get();
+    }
+
+    @GetMapping("/auth")
+    public Authentication authentication(Authentication authentication){
+        return authentication;
     }
 }
