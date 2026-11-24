@@ -68,4 +68,5 @@ La console d'administration est ensuite accessible sur `http://localhost:8080`. 
 - Configuration de l'authorization en demandant l'authentification dans SecurityConfig au backend
 - Ajout des paramètres du keycloak (realm , lien de la certif) pour l'accès au public key 
 - Création d'une classe qui fera un JWTConversion dans security package pour accéder aux autorités puis configurer le SecurityFilterChain à utiliser le jwtConverter
+- Ajout du @PreAuthorizze dans les méthodes du RestController pour attribuer les roles et pour que cela marche; l'ajout du @EnableMethodSecurity dans la classeSecurityConfig
     

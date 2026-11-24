@@ -2,6 +2,7 @@ package ma.formation.inventoryservice.web;
 
 import ma.formation.inventoryservice.entities.Product;
 import ma.formation.inventoryservice.repository.ProductRepository;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,11 +21,13 @@ public class ProductRestController {
     }
 
     @GetMapping("/products")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public List<Product> productList(){
         return productRepository.findAll();
     }
 
     @GetMapping("/products/{id}")
+    @PreAuthorize("hasAuthority('USER')")
     public Product productById(@PathVariable String id){
         return productRepository.findById(id).get();
     }
