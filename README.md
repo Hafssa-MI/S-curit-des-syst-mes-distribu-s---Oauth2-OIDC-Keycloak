@@ -51,3 +51,20 @@ La console d'administration est ensuite accessible sur `http://localhost:8080`. 
 - Création des composantes products et customer puis réglage du routage
 - Résolution du problème do Cors en ajoutant un @Bean à la classe SecurityConfig de type CorsConfigurationSource qui marche aussi pour les routes protégé au lieu de @CrossOrigin(*)
     ![img_4.png](img_4.png)
+- Démarrage du keycloak et création du realm : Bdcc-realm et client ecom-client-ang avec deux roles user et admin et deux users
+    ![img_5.png](img_5.png)
+    ![img_6.png](img_6.png)
+    ![img_7.png](img_7.png)
+    * Authentification avec uername&password
+    ![img_8.png](img_8.png)
+    ![img_9.png](img_9.png)
+    * Authentification avec refresh token
+    ![img_10.png](img_10.png)
+    ![img_11.png](img_11.png)
+    * Authentification avec client secret
+    ![img_12.png](img_12.png)
+    ![img_13.png](img_13.png)
+
+- Configuration de l'authorization en demandant l'authentification dans SecurityConfig au backend
+- Ajout des paramètres du keycloak (realm , lien de la certif) pour l'accès au public key 
+    

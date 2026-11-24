@@ -25,6 +25,7 @@ public class SecurityConfig {
                 .headers(h->h.frameOptions(fo->fo.disable()))
                 .authorizeHttpRequests(ar->ar.requestMatchers("/api/**","/h2-console/**").permitAll())
                 .authorizeHttpRequests(ar->ar.anyRequest().authenticated())
+                .oauth2ResourceServer(o2->o2.jwt(Customizer.withDefaults()))
                 .build();
 
     }
